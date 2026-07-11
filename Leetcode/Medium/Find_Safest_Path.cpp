@@ -50,10 +50,12 @@ int maximumSafenessFactor(vector<vector<int>> &grid) {
     // [1 2 3 2]
     // [0 1 2 3]
 
+    // Max Heap
     priority_queue<pair<int, pair<int, int>>> pq;
     vector<vector<int>> maxSafenessToCell(n, vector<int>(n, -1));
 
     maxSafenessToCell[0][0] = grid[0][0];
+
     pq.push({grid[0][0], {0, 0}});
 
     while (!pq.empty()) {
